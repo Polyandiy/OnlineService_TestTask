@@ -37,8 +37,8 @@ struct MainView: View {
     func buildViewInOrder(order: String) -> some View {
         switch order {
         case "vip": premiumSectionView
-        case "examples": collectionWorkView
         case "categories": categoriesSection
+        case "examples": collectionWorkView
         case "catalog": cathalogView
         default: EmptyView()
         }
@@ -46,7 +46,6 @@ struct MainView: View {
     
     private var premiumSectionView: some View {
         VStack {
-            
             HStack {
                 Text("Премиум")
                     .padding(.trailing, 4)

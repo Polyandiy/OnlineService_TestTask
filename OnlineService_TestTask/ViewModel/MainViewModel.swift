@@ -11,7 +11,6 @@ import SwiftUI
 class MainViewModel: ObservableObject {
     
     @Published var modelData: ApiModel?
-    @Published var isFinishedLoading: Bool = false
     @Published var offset: CGFloat = 0
     
     init() {
@@ -94,7 +93,6 @@ class MainViewModel: ObservableObject {
             NetworkService.networkService.getRequest { [weak self] data in
                 guard data != nil else { return }
                 self?.modelData = data
-                self?.isFinishedLoading = true
             }
         }
     }

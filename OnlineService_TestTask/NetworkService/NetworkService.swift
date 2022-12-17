@@ -14,11 +14,10 @@ class NetworkService {
     func getRequest(completion: @escaping (ApiModel?) -> Void) {
         
         let url = self.url()
-        
         print(url)
         
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = "GET"
         request.setValue("maJ9RyT4TJLt7bmvYXU7M3h4F797fUKofUf3373foN94q4peAM", forHTTPHeaderField: "Authorization")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
