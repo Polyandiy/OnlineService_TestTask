@@ -8,5 +8,7 @@ ___Задание___:
 - выполнение верски с помощью swiftUI
 ___
 
-https://user-images.githubusercontent.com/109841383/208240821-9937a383-6954-438b-8237-07a2e89958c1.mp4
+
+
+https://user-images.githubusercontent.com/109841383/209474263-4343b0c2-0cd5-4138-90d1-50d0dd074d74.mp4
 
