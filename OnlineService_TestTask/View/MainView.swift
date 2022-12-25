@@ -13,6 +13,8 @@ struct MainView: View {
     
     @StateObject var mainViewModel = MainViewModel()
     
+    var items = [GridItem(.fixed(60)), GridItem(.fixed(60))]
+    
     var body: some View {
         ScrollView{
             LazyVStack(alignment: .leading, spacing: 15, pinnedViews: [.sectionHeaders], content: {
@@ -79,6 +81,7 @@ struct MainView: View {
     }
     
     private var categoriesSection: some View {
+        
         VStack {
             Rectangle()
                 .background(Color.gray)
@@ -96,13 +99,13 @@ struct MainView: View {
                 
                 Spacer()
             }
-            
+//Внесены изменения
             ScrollView(.horizontal) {
-                HStack {
+                LazyHGrid(rows: items, alignment: .top, spacing: 10, content: {
                     ForEach($mainViewModel.categoriesSection, id: \.self) { category in
                         CategoriesSectionView(categories: category)
                     }
-                }
+                })
             }
         }
         .padding()

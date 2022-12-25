@@ -17,14 +17,14 @@ struct CategoriesSectionView: View {
             Image("image")
                 .resizable()
                 .cornerRadius(10)
-                .frame(width: 180, height: 80)
+                .frame(width: 180, height: 60)
             Text(categories)
                 .lineLimit(2)
                 .font(.system(size: 18, weight: .bold))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
-                .frame(width: 140)
+                .frame(width: 160)
             
-        }.padding(.leading, 2)
+        }
     }
 }
